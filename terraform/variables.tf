@@ -28,3 +28,10 @@ variable "vpc_id" {}
 variable "route53_domain" {}
 
 variable "github_oauth" {}
+variable "github_owner" {}
+variable "github_repo" {}
+variable "github_branch" {}
+
+variable "enable_route53_cname" {
+  default = false
+}

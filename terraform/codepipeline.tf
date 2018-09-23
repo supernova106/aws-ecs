@@ -77,9 +77,9 @@ resource "aws_codepipeline" "this" {
       output_artifacts = ["feweb"]
 
       configuration {
-        Owner      = "supernova106"
-        Repo       = "httpd"
-        Branch     = "master"
+        Owner      = "${var.github_owner}"
+        Repo       = "${var.github_repo}"
+        Branch     = "${var.github_branch}"
         OAuthToken = "${var.github_oauth}"
       }
     }

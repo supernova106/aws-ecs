@@ -9,3 +9,4 @@
 *.tfvars
 
 plan
+.env

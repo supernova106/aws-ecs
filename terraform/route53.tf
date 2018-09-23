@@ -1,4 +1,6 @@
 resource "aws_route53_record" "feweb-blue" {
+  count = "${var.enable_route53_cname ? 1 : 0}"
+
   zone_id = "${data.aws_route53_zone.this.zone_id}"
   name    = "${var.environment_prefix}-${var.cluster_name}.${var.route53_domain}"
   type    = "CNAME"
@@ -13,6 +15,8 @@ resource "aws_route53_record" "feweb-blue" {
 }
 
 resource "aws_route53_record" "feweb-green" {
+  count = "${var.enable_route53_cname ? 1 : 0}"
+
   zone_id = "${data.aws_route53_zone.this.zone_id}"
   name    = "${var.environment_prefix}-${var.cluster_name}.${var.route53_domain}"
   type    = "CNAME"

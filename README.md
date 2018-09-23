@@ -22,9 +22,8 @@ Services in use:
 - Setup 
 
 ```sh
-export TF_VAR_vpc_id=<your_vpc_id>
-export TF_VAR_route53_domain=<your_domain>
-export TF_VAR_github_oauth=<your_token>
+cp env_sample .env
+source .env
 ```
 
 - To bootstrap the environment.
